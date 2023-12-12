@@ -57,7 +57,11 @@ const App = () => {
         if(gameSelected.intel.includes(selectProcesador)){
           if(gameSelected.RAM.includes(selectRAM)){
             if(gameSelected.Almacenamiento.includes(selectALM)){
-              setTextResult("✅ Su PC es apto para jugar ✅");
+              if(gameSelected.graficas.includes(selectGrafica)){
+                setTextResult("✅ Su PC es apto para jugar ✅");
+              }else{
+                setTextResult("❌ Su gpu no no es apta para jugar ❌");
+              }
             }else{
               setTextResult("❌ Su PC no tiene suficiente espacio ❌");
             }
@@ -71,7 +75,11 @@ const App = () => {
         if(gameSelected.AMD.includes(selectProcesador)){
           if(gameSelected.RAM.includes(selectRAM)){
             if(gameSelected.Almacenamiento.includes(selectALM)){
-              setTextResult("✅ Su PC es apto para jugar ✅");
+              if(gameSelected.graficas.includes(selectGrafica)){
+                setTextResult("✅ Su PC es apto para jugar ✅");
+              }else{
+                setTextResult("❌ Su gpu no no es apta para jugar ❌");
+              }
             }else{
               setTextResult("❌ Su PC no tiene suficiente espacio ❌");
             }
